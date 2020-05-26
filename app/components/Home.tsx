@@ -87,7 +87,11 @@ export default class Home extends React.Component<
 
   async findExecutable(): Promise<string | undefined> {
     try {
-      const executable = path.join(app.getPath('userData'), this.program);
+      const executable = path.join(
+        app.getPath('userData'),
+        'downloads',
+        this.program
+      );
       await fs.promises.access(executable);
       return executable;
     } catch {
@@ -97,6 +101,7 @@ export default class Home extends React.Component<
     try {
       const executable = path.join(
         app.getPath('userData'),
+        'downloads',
         `${this.program}.exe`
       );
       await fs.promises.access(executable);
@@ -145,7 +150,7 @@ export default class Home extends React.Component<
         // const filename = url.replace(/.*\//, '');
         const filename =
           process.platform === 'win32' ? `${this.program}.exe` : this.program;
-        const file = path.join(app.getPath('userData'), filename);
+        const file = path.join(app.getPath('userData'), 'downloads', filename);
 
         res.pipe(fs.createWriteStream(file)).on('close', resolve);
         res.on('error', reject);

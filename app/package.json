@@ -1,7 +1,7 @@
 {
   "name": "youtube-dl-gui",
   "productName": "youtube-dl GUI",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./main.prod.js",
   "author": {
     "name": "Domonkos Lezsák",
@@ -13,5 +13,7 @@
     "postinstall": "yarn electron-rebuild"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "node-pty": "^0.9.0"
+  }
 }

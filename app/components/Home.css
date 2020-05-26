@@ -1,14 +1,37 @@
 .container {
   position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
 }
 
-.container h2 {
-  font-size: 5rem;
+.help {
+  width: 100%;
+  height: calc(100% - 13em);
+  background: darkblue;
+  color: white;
 }
 
-.container a {
-  font-size: 1.4rem;
+.terminal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: calc(100vh - 6em);
+  background: hsla(0, 0%, 10%, 1);
+}
+
+.argument {
+  /* width: auto; */
+  font-family: monospace;
+  border: 1px;
+  border-left: 1px solid black;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+.add {
+  position: relative;
+  top: 1px;
 }

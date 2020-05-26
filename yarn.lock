@@ -1756,6 +1756,13 @@
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.5.tgz#b14efa8852b7768d898906613c23f688713e02cd"
   integrity sha512-Q1y515GcOdTHgagaVFhHnIFQ38ygs/kmxdNpvpou+raI9UO3YZcHDngBSYKQklcKlvA7iuQlmIKbzvmxcOE9CQ==
 
+"@types/electron-prompt@^1.3.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@types/electron-prompt/-/electron-prompt-1.3.1.tgz#fd43e46d22299ed741fafff2bf5a2f891a1b94d2"
+  integrity sha512-ZCEbx7f8NVV6/FV/RJfYYCkT20juwrD3UQQ0XmiRrlxdQYb/NfnzJUlac/J9Z9e8d3MMSrWu2B7tF4VOVqQIYw==
+  dependencies:
+    electron latest
+
 "@types/enzyme-adapter-react-16@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.6.tgz#8aca7ae2fd6c7137d869b6616e696d21bb8b0cec"
@@ -5684,6 +5691,13 @@ dns-txt@^2.0.2:
   dependencies:
     buffer-indexof "^1.0.0"
 
+doc-ready@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/doc-ready/-/doc-ready-1.0.4.tgz#37f5391969cff994303fdfef2e5d50357f8164d3"
+  integrity sha1-N/U5GWnP+ZQwP9/vLl1QNX+BZNM=
+  dependencies:
+    eventie "^1"
+
 doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -5935,6 +5949,13 @@ electron-log@^4.0.6:
   resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-4.0.6.tgz#7d4244082a6f5ae3838f3fa4cd7271f8dd610bf1"
   integrity sha512-inoIFKld98aRAp/l5IzLFx8Oc9sp+SKlTCrVgZKWK+qcI92rT574Ybgcah5dU8G3485vc7ClFIEfCf/IERyBJA==
 
+electron-prompt@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/electron-prompt/-/electron-prompt-1.5.1.tgz#fa9e2e519b76236271d7f83ac716b98d53162731"
+  integrity sha512-rB5eZWIFXG+GWGbTtm/zDleihFmx7EAibSv04r/EM/fwV7jNzPfLfA86e+lSmYa5ZTFnS5mSQNiZD1YYJWJjXw==
+  dependencies:
+    doc-ready "^1.0.4"
+
 electron-publish@22.3.6:
   version "22.3.6"
   resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-22.3.6.tgz#97500b832d5b281785882100d7c01dbf55dabd03"
@@ -5992,6 +6013,15 @@ electron@7.1.13:
   version "7.1.13"
   resolved "https://registry.yarnpkg.com/electron/-/electron-7.1.13.tgz#f98838de70d74890cf639bbbbbe1f3b4b341ae78"
   integrity sha512-WFfjhAG/B2iVjZcGoQkwkn/Zf1YN3U5Ux/hTcnANRiM6qPMAX23CINQC+vhlHspcjM9/jbF310fHCSrsXMGlAg==
+  dependencies:
+    "@electron/get" "^1.0.1"
+    "@types/node" "^12.0.12"
+    extract-zip "^1.0.3"
+
+electron@latest:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-9.0.0.tgz#335cd426a8a542ad8d4c96c0c40a8668ab5527b8"
+  integrity sha512-JsaSQNPh+XDYkLj8APtVKTtvpb86KIG57W5OOss4TNrn8L3isC9LsCITwfnVmGIXHhvX6oY/weCtN5hAAytjVg==
   dependencies:
     "@electron/get" "^1.0.1"
     "@types/node" "^12.0.12"
@@ -6556,6 +6586,11 @@ eventemitter3@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.0.tgz#d65176163887ee59f386d64c82610b696a4a74eb"
   integrity sha512-qerSRB0p+UDEssxTtm6EDKcE7W4OaoisfIMl4CngyEhjpYglocpNg6UEqCvemdGhosAsg4sO2dXJOdyBifPGCg==
+
+eventie@^1:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/eventie/-/eventie-1.0.6.tgz#d4ffc8b0c2b5e493c2aa1b22cbe918d3aee74437"
+  integrity sha1-1P/IsMK15JPCqhsiy+kY067nRDc=
 
 events@^3.0.0:
   version "3.1.0"
@@ -9657,6 +9692,11 @@ longest-streak@^2.0.1:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/longest-streak/-/longest-streak-2.0.4.tgz#b8599957da5b5dab64dee3fe316fa774597d90e4"
   integrity sha512-vM6rUVCVUJJt33bnmHiZEvr7wPT78ztX7rojL+LW51bHtLh6HTjx84LA5W4+oa6aKEJA7jJu5LR6vQRBpA5DVg==
+
+lookpath@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/lookpath/-/lookpath-1.0.6.tgz#b34aaf01a963f08dbc9ca9b83b20b33a421e957c"
+  integrity sha512-0GBSOhCeS6s/X4WseLawmofdKLOuaknK09VHL3eBra0rCxYbZBQFx0iwH8Qfm9gaDPXiMEcd7IVXqjAjn5rEfQ==
 
 loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
@@ -15506,6 +15546,24 @@ xtend@~2.1.1:
   integrity sha1-bv7MKk2tjmlixJAbM3znuoe10os=
   dependencies:
     object-keys "~0.4.0"
+
+xterm-addon-fit@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/xterm-addon-fit/-/xterm-addon-fit-0.4.0.tgz#06e0c5d0a6aaacfb009ef565efa1c81e93d90193"
+  integrity sha512-p4BESuV/g2L6pZzFHpeNLLnep9mp/DkF3qrPglMiucSFtD8iJxtMufEoEJbN8LZwB4i+8PFpFvVuFrGOSpW05w==
+
+xterm-for-react@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/xterm-for-react/-/xterm-for-react-1.0.4.tgz#6b35b9b037a0f9d979e7b57bb1d7c6ab7565b380"
+  integrity sha512-DCkLR9ZXeW907YyyaCTk/3Ol34VRHfCnf3MAPOkj3dUNA85sDqHvTXN8efw4g7bx7gWdJQRsEpGt2tJOXKG3EQ==
+  dependencies:
+    prop-types "^15.7.2"
+    xterm "^4.5.0"
+
+xterm@^4.5.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/xterm/-/xterm-4.6.0.tgz#1b49b32e546409c110fbe8ece0b4a388504a937d"
+  integrity sha512-98211RIDrAECqpsxs6gbilwMcxLtxSDIvtzZUIqP1xIByXtuccJ4pmMhHGJATZeEGe/reARPMqwPINK8T7jGZg==
 
 y18n@^3.2.1:
   version "3.2.1"

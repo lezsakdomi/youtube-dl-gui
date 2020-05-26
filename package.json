@@ -1,7 +1,7 @@
 {
   "name": "youtube-dl-gui",
   "productName": "youtube-dl GUI",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -77,14 +77,15 @@
     },
     "win": {
       "target": [
-        "nsis",
-        "msi"
+        "msi",
+        "portable"
       ]
     },
     "linux": {
       "target": [
         "deb",
-        "rpm",
+        "tar.xz",
+        "snap",
         "AppImage"
       ],
       "category": "Media"

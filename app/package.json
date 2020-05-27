@@ -2,7 +2,7 @@
   "name": "youtube-dl-gui",
   "productName": "youtube-dl GUI",
   "description": "A graphical interface for youtube-dl, the famous video downloader program",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "./main.prod.js",
   "author": {
     "name": "Domonkos Lezsák",

@@ -2,6 +2,25 @@
 # yarn lockfile v1
 
 
+doc-ready@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/doc-ready/-/doc-ready-1.0.4.tgz#37f5391969cff994303fdfef2e5d50357f8164d3"
+  integrity sha1-N/U5GWnP+ZQwP9/vLl1QNX+BZNM=
+  dependencies:
+    eventie "^1"
+
+electron-prompt@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/electron-prompt/-/electron-prompt-1.5.1.tgz#fa9e2e519b76236271d7f83ac716b98d53162731"
+  integrity sha512-rB5eZWIFXG+GWGbTtm/zDleihFmx7EAibSv04r/EM/fwV7jNzPfLfA86e+lSmYa5ZTFnS5mSQNiZD1YYJWJjXw==
+  dependencies:
+    doc-ready "^1.0.4"
+
+eventie@^1:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/eventie/-/eventie-1.0.6.tgz#d4ffc8b0c2b5e493c2aa1b22cbe918d3aee74437"
+  integrity sha1-1P/IsMK15JPCqhsiy+kY067nRDc=
+
 nan@^2.14.0:
   version "2.14.1"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.1.tgz#d7be34dfa3105b91494c3147089315eff8874b01"

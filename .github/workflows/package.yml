@@ -1,6 +1,9 @@
-name: Test
+name: Package
 
-on: push
+on:
+  push:
+    tags:
+      - v*
 
 jobs:
   release:
@@ -23,14 +26,8 @@ jobs:
         run: |
           yarn install
 
-      - name: yarn test
+      - name: yarn package-ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           yarn package-ci
-          yarn lint
-          yarn ts
-
-# Failing because virtual framebuffer not installed
-#          yarn build-e2e
-#          yarn test-e2e

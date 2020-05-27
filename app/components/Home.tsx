@@ -25,6 +25,7 @@ export default class Home extends React.Component<
     argvIndexShift: number;
     xTermRef?: React.RefObject<XTerm>;
     initError?: Error;
+    downloaded?: boolean | null;
   }
 > {
   private readonly fitAddon: FitAddon;
@@ -383,6 +384,37 @@ export default class Home extends React.Component<
   }
 
   protected renderInstallInstructions() {
+    const { downloaded } = this.state;
+
+    if (downloaded === null) {
+      return (
+        <p>
+          Please wait, download in progress...
+          <br />
+          PS.: Do not close the application or you&apos;ll have troubles!
+        </p>
+      );
+    }
+
+    if (downloaded === true) {
+      return (
+        <p>
+          Hmm, it seems like something&apos;s wrong with the downloaded binary.
+          Open the containing folder and try deleting or re-downloading it.
+          <button
+            type="button"
+            onClick={() => {
+              remote.shell.openItem(
+                path.join(app.getPath('userData'), 'download')
+              );
+            }}
+          >
+            Open containing folder
+          </button>
+        </p>
+      );
+    }
+
     if (this.downloadUrl) {
       const { downloadUrl } = this;
 
@@ -393,12 +425,34 @@ export default class Home extends React.Component<
             <a
               href={downloadUrl}
               onClick={event => {
+                this.setState({ downloaded: null });
+                remote
+                  .getCurrentWindow()
+                  .setProgressBar(1.1, { mode: 'indeterminate' });
+
                 this.download(downloadUrl)
-                  .then(() => {
-                    return this.initialize();
+                  .then(async () => {
+                    this.setState({ downloaded: true });
+                    remote
+                      .getCurrentWindow()
+                      .setProgressBar(1, { mode: 'paused' });
+
+                    await this.initialize();
+
+                    remote
+                      .getCurrentWindow()
+                      .setProgressBar(-1, { mode: 'none' });
+
+                    return undefined;
                   })
                   .catch((e: Error) => {
                     log.error('Failed to download and reinitialize', e);
+
+                    this.setState({ downloaded: false });
+                    remote
+                      .getCurrentWindow()
+                      .setProgressBar(0, { mode: 'error' });
+
                     // noinspection JSIgnoredPromiseFromCall
                     dialog.showMessageBox({
                       message:

@@ -271,7 +271,7 @@ export default class Home extends React.Component<
             prompt(
               {
                 title: `${this.program}: New argument`,
-                label: `Please feed <code>${this.program}</code> with some input`,
+                label: `Feed <code>${this.program}</code> with some input`,
                 useHtmlLabel: true,
                 inputAttrs: {
                   placeholder: 'https://youtube.com/watch?v=...'
